@@ -41,6 +41,11 @@ def submit_action():
     update_excel(problem_name, difficulty_level, code_link, explanation, folder_path=repo_folder)
 
     messagebox.showinfo("Success", "Problem added successfully")
+    # Clear all entries after showing success message
+    problem_name_entry.delete(0, tk.END)
+    problem_code_entry.delete("1.0", tk.END)
+    difficulty_level_combo.set("Easy")  # Reset to default or first item
+    explanation_entry.delete("1.0", tk.END)
 
 # Set dark theme colors
 background_color = '#333333'  # Dark gray

@@ -1,55 +1,72 @@
-# Upload Leetcode Problems and your Solutions to Your Github Repository And Also Update Them Simultaneously to Excel Sheet With The Github File Link Automatically
+# Upload Leetcode Problems and Solutions to GitHub and Excel
 
-## How To Download:
+Automatically upload Leetcode problems and your solutions to your GitHub repository and update an Excel sheet with the GitHub file link.
 
-## Method 1
+## How to Download
 
-### 1. Download it's zip file by clicking on `code` and then `Download Zip`
+### Method 1: Download ZIP
 
-### 2. Extract the zip file and open the folder
+![alt text](image-4.png)
+![alt text](image-5.png)
 
-## How To Use This Application:
+1. Click on `code` then `Download Zip`.
+2. Extract the zip file and open the folder.
 
-![alt text](image.png)
+### Method 2: Clone The Repository
 
-> Click on `Setup Git and Github Repositories`. Then
+![alt text](image-4.png)
+![alt text](image-6.png)
 
-![alt text](image-1.png)
+1. Click on `code`
+2. Copy the web URL
+3. Open Gitbash on any folder you want to clone the repository in and paste
 
-- Enter your `github username` (can be found on the github page, eg: `ahsanashraf148`)
-- Enter the repository name by which you wish to create the repository
-- Enter `Github Token` (can be retrieved by following the instructions at the bottom)
-- Create a new folder where you wish to put code files and maintain as a git repo and
-  - Enter the path of the folder
-- Click on `Create and Push Repo`
+```shell
+    git clone {url you copied} .
+```
 
-### Go to main window again
+## How to Use
 
-![alt text](image-2.png)
+### Setup Git and GitHub Repositories
 
-> Click on Upload Problem To Github
-> ![alt text](image-3.png)
+1. Click on `Setup Git and Github Repositories`.
+2. Enter your `github username`.
+3. Enter the desired repository name.
+4. Enter your `GitHub Token`.
+5. Create a new folder for your code files and enter its path.
+6. Click on `Create and Push Repo`.
 
-- Enter `Problem name`
-- Select `Difficulty Level`
-- Enter the `problem code` and it's `explanation`
-- Click `Submit`
+![Setup Instructions](image.png)
+![Setup Form](image-1.png)
 
-### Congrats, the problem file has been created on the given folder under the set diffcilty level folder, and has been uploaded to Github as well. Moreover it's name, difficulty level, github file link and explanation has been apppended on `problems.xlsx` excel file
+### Upload Problem to GitHub
+
+1. Go back to the main window.
+2. Click on `Upload Problem To Github`.
+3. Enter the `Problem name`.
+4. Select `Difficulty Level`.
+5. Enter the `problem code` and its `explanation`.
+6. Click `Submit`.
+
+![Upload Problem](image-2.png)
+![Problem Form](image-3.png)
+
+**Congratulations!** The problem file has been created in the specified folder, uploaded to GitHub, and its details appended to `problems.xlsx`.
 
 ## Prerequisites
 
-### Should have Python installed
+- Python must be installed.
 
-### To get a `GitHub token`, follow these steps:
+## Getting a GitHub Token
 
-`Log in to GitHub:` Open your web browser and log in to your GitHub account.
-`Access Settings:` Click on your profile picture in the top right corner, then select `Settings` from the dropdown menu.
-`Developer Settings:` Scroll down to the bottom of the sidebar and click on "Developer settings".
-`Personal Access Tokens:` In the left sidebar, click on "Personal access tokens".
-`Generate New Token:` Click on the "Generate new token" button.
-`Token Description:` Enter a note or description for your token to remember its purpose like "using the token for leetcode problem automation for creating github repositories automatically. Expiry of this token is on `some date`"
-`Select Scopes:` Choose the scopes or permissions you want to grant this token. For repository operations, make sure to select the appropriate scopes under the "repo" category.
-`Generate Token:` Click the "Generate token" button at the bottom of the page.
-Copy Your New Token: Make sure to copy your new personal access token now. You won’t be able to see it again!
-`This token acts as a password, so keep it secure and do not share it.`
+1. **Log in to GitHub:** Open your web browser and log in to your GitHub account.
+2. **Access Settings:** Click on your profile picture, then select `Settings`.
+3. **Developer Settings:** Scroll down and click on "Developer settings".
+4. **Personal Access Tokens:** Click on "Personal access tokens".
+5. **Generate New Token:** Click on "Generate new token".
+6. **Token Description:** Enter a description for your token.
+7. **Select Scopes:** Choose the necessary scopes under the "repo" category.
+8. **Generate Token:** Click "Generate token" at the bottom.
+9. **Copy Your New Token:** Copy your new token immediately. You won’t be able to see it again!
+
+**Important:** Treat your token as a password. Keep it secure and do not share it.
