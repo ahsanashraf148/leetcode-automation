@@ -110,11 +110,7 @@ def gui_main():
         if repo_url:
             push_to_github(USERNAME, REPO_NAME, FOLDER_PATH)
             messagebox.showinfo("Success", f"Repository {REPO_NAME} has been successfully pushed to GitHub.", parent=window)
-            # Clear entries after showing success message
-            username_entry.delete(0, tk.END)
-            repo_name_entry.delete(0, tk.END)
-            token_entry.delete(0, tk.END)
-            folder_path_entry.delete(0, tk.END)
+            window.destroy()
         else:
             messagebox.showerror("Error", "Failed to push the repository to GitHub.", parent=window)
         
