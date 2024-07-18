@@ -2,7 +2,6 @@ import os
 import tkinter as tk
 from tkinter import messagebox, ttk
 
-# Import the functionalities from other files
 from github_integration import upload_to_github
 from excel_operations import update_excel
 
@@ -36,7 +35,6 @@ def submit_action():
     upload_to_github(file_name, folder_path=repo_folder)
 
     # Update the GitHub link to include the correct path
-    
     code_link = f"https://github.com/a{username}/{repo_name}/blob/main/{folder_path.replace(' ', '%20')}/{file_name.replace(' ', '%20')}"
     update_excel(problem_name, difficulty_level, code_link, explanation, folder_path=repo_folder)
 
@@ -59,7 +57,7 @@ root = tk.Tk()
 root.title("LeetCode Problem Submission")
 root.geometry("700x500")
 root.configure(bg=background_color)
-root.iconbitmap('icon.ico')
+root.iconbitmap('code/icon.ico')
 # Improved font style
 font_style = ("Arial", 12)
 padding = {"padx": (5, 20), "pady": 5}

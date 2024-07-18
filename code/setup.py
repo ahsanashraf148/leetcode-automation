@@ -17,9 +17,9 @@ def run_command(command, cwd=None):
     stdout, stderr = process.communicate()
     if process.returncode != 0:
         print(f"Error: {stderr.decode('utf-8')}")
-        return ""  # Return an empty string instead of None on error
+        return ""
     else:
-        return stdout.decode('utf-8').strip()  # Ensure output is stripped of whitespace
+        return stdout.decode('utf-8').strip()
 
 def initialize_local_git_repo(folder_path):
     if not os.path.exists(folder_path):
@@ -78,7 +78,7 @@ def gui_main():
     window.title("GitHub Repo Creator")
     window.configure(bg=background_color)
     window.geometry("700x500")
-    window.iconbitmap('icon.ico')
+    window.iconbitmap('code/icon.ico')
 
     font_style = ("Arial", 12)
     padding = {"padx": (5, 20), "pady": 5}

@@ -3,12 +3,15 @@ from subprocess import Popen, PIPE
 
 def run_setup():
     install_requirements()
-    Popen(["python", "setup.py"], stdout=PIPE, stderr=PIPE)
+    process = Popen(["python", "code/setup.py"], stdout=PIPE, stderr=PIPE)
+    output, error = process.communicate()
+    print("Output:", output.decode())
+    print("Error:", error.decode())  
 
 def run_main_app():
-    process = Popen(["python", "main_app.py"], stdout=PIPE, stderr=PIPE)
-    output, error = process.communicate()  # Wait for the process to finish and get the output and error
-    print("Output:", output.decode())  # Decode from bytes to string and print
+    process = Popen(["python", "code/main_app.py"], stdout=PIPE, stderr=PIPE)
+    output, error = process.communicate()
+    print("Output:", output.decode())
     print("Error:", error.decode())  
 
 def install_requirements():
@@ -24,9 +27,8 @@ root = tk.Tk()
 root.title("GitHub Automation Tool")
 root.geometry("700x300")
 root.configure(bg=background_color)
-root.iconbitmap('icon.ico')
+root.iconbitmap('code/icon.ico')
 
-# Improved font style
 font_style = ("Arial", 12)
 padding = {"padx": 20, "pady": 10}
 
