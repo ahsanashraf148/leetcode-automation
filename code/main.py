@@ -1,5 +1,24 @@
+import os
+import sys
+import time
 import tkinter as tk
+
 from subprocess import Popen, PIPE
+
+def install_requirements():
+    requirements_path = os.path.join(os.path.dirname(__file__), 'requirements.txt')
+    process = Popen(["python", "-m", "pip", "install", "-r", requirements_path], stdout=PIPE, stderr=PIPE)
+    process.wait()
+    print("Installing requirements", end="")
+    while process.poll() is None:
+        print(".", end="")
+        sys.stdout.flush()  # Ensure the dot is printed immediately
+        time.sleep(1)  # Wait a bit before printing the next dot
+    output, error = process.communicate()  # Wait for the installation to complete
+    if error:
+        print("Error installing requirements:", error.decode())
+    else:
+        print("Requirements installed successfully")
 
 def run_setup():
     install_requirements()
@@ -14,14 +33,13 @@ def run_main_app():
     print("Output:", output.decode())
     print("Error:", error.decode())  
 
-def install_requirements():
-    Popen(["python", "-m", "pip", "install", "-r", "requirements.txt"], stdout=PIPE, stderr=PIPE)
 
 # Set dark theme colors
 background_color = '#333333'  # Dark gray
 text_color = '#FFFFFF'  # White
 button_background = '#555555'  # Darker gray
 button_foreground = '#FFFFFF'  # White
+
 
 root = tk.Tk()
 root.title("GitHub Automation Tool")
@@ -31,8 +49,6 @@ root.iconbitmap('code/icon.ico')
 
 font_style = ("Arial", 12)
 padding = {"padx": 20, "pady": 10}
-
-install_requirements()
 
 heading_label = tk.Label(root, text="GitHub Automation Tool", bg=background_color, fg="#FFD700", font=("Arial", 16, "bold"))
 heading_label.pack(pady=(20, 10))

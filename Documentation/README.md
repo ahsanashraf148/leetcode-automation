@@ -29,7 +29,7 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 
 ### Setup Git and GitHub Repositories
 
-1. Click on `Setup Git and Github Repositories`.
+1. Click on `Setup Git and Github Repositories`. Then wait for a few seconds (some dependencies need to be installed)
 2. Enter your `github username`.
 3. Enter the desired repository name.
 4. Enter your `GitHub Token`.
@@ -70,3 +70,7 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 9. **Copy Your New Token:** Copy your new token immediately. You won’t be able to see it again!
 
 **Important:** Treat your token as a password. Keep it secure and do not share it.
+
+## Example Repository Created Through This Application
+
+https://github.com/ahsanashraf148/leetcoding.git

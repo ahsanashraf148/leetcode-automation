@@ -1,9 +1,25 @@
 import os
+import threading
 import tkinter as tk
 from tkinter import messagebox, ttk
 
 from github_integration import upload_to_github
 from excel_operations import update_excel
+
+def threaded_submit_action():
+    try:
+        loading_label.grid()  # Show the loading label
+        root.update_idletasks()  # Force the GUI to update the loading label visibility
+        submit_action()  # Call the original submit action
+    finally:
+        loading_label.grid_remove()  # Ensure the loading label is hidden afterwards
+        messagebox.showinfo("Success", "Problem added successfully")
+        # Clear all entries after showing success message
+        problem_name_entry.delete(0, tk.END)
+        problem_code_entry.delete("1.0", tk.END)
+        difficulty_level_combo.set("Easy")  # Reset to default or first item
+        explanation_entry.delete("1.0", tk.END)
+        root.update_idletasks()
 
 def submit_action():
     with open('config.txt', 'r') as f:
@@ -16,7 +32,7 @@ def submit_action():
     if not all([problem_name, problem_code, difficulty_level, explanation.strip()]):
         messagebox.showerror("Error", "All fields are required")
         return
-
+    loading_label.grid()
     # Base folder path
     base_folder_path = f"{repo_folder}"
     # Folder path including difficulty level
@@ -37,13 +53,6 @@ def submit_action():
     # Update the GitHub link to include the correct path
     code_link = f"https://github.com/a{username}/{repo_name}/blob/main/{folder_path.replace(' ', '%20')}/{file_name.replace(' ', '%20')}"
     update_excel(problem_name, difficulty_level, code_link, explanation, folder_path=repo_folder)
-
-    messagebox.showinfo("Success", "Problem added successfully")
-    # Clear all entries after showing success message
-    problem_name_entry.delete(0, tk.END)
-    problem_code_entry.delete("1.0", tk.END)
-    difficulty_level_combo.set("Easy")  # Reset to default or first item
-    explanation_entry.delete("1.0", tk.END)
 
 # Set dark theme colors
 background_color = '#333333'  # Dark gray
@@ -84,8 +93,12 @@ explanation_entry = tk.Text(root, height=10, font=font_style, bg=entry_backgroun
 explanation_entry.grid(row=3, column=1, sticky="ew", **padding)
 
 # Submit Button
-submit_button = tk.Button(root, text="Submit", command=submit_action, bg=button_background, fg=button_foreground, font=font_style)
+submit_button = tk.Button(root, text="Submit", command=lambda: threading.Thread(target=threaded_submit_action).start(), bg=button_background, fg=button_foreground, font=font_style)
 submit_button.grid(row=4, column=0, columnspan=2, sticky="ew", **padding)
+
+loading_label = tk.Label(root, text="Submitting...", bg=background_color, fg='green', font=font_style)
+loading_label.grid(row=5, column=0, columnspan=2, sticky="ew", **padding)
+loading_label.grid_remove()  # Hide the label initially
 
 # Grid column configuration for resizing
 root.grid_columnconfigure(1, weight=1)
