@@ -22,13 +22,13 @@ def install_requirements():
 
 def run_setup():
     install_requirements()
-    process = Popen(["python", "code/setup.py"], stdout=PIPE, stderr=PIPE)
+    process = Popen(["python", os.path.join("code", "setup.py")], stdout=PIPE, stderr=PIPE)
     output, error = process.communicate()
     print("Output:", output.decode())
     print("Error:", error.decode())  
 
 def run_main_app():
-    process = Popen(["python", "code/main_app.py"], stdout=PIPE, stderr=PIPE)
+    process = Popen(["python", os.path.join("code", "main_app.py")], stdout=PIPE, stderr=PIPE)
     output, error = process.communicate()
     print("Output:", output.decode())
     print("Error:", error.decode())  
@@ -45,7 +45,6 @@ root = tk.Tk()
 root.title("GitHub Automation Tool")
 root.geometry("700x300")
 root.configure(bg=background_color)
-root.iconbitmap('code/icon.ico')
 
 font_style = ("Arial", 12)
 padding = {"padx": 20, "pady": 10}

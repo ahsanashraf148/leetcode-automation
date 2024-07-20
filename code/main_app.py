@@ -66,7 +66,6 @@ root = tk.Tk()
 root.title("LeetCode Problem Submission")
 root.geometry("700x500")
 root.configure(bg=background_color)
-root.iconbitmap('code/icon.ico')
 # Improved font style
 font_style = ("Arial", 12)
 padding = {"padx": (5, 20), "pady": 5}

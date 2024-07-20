@@ -78,7 +78,6 @@ def gui_main():
     window.title("GitHub Repo Creator")
     window.configure(bg=background_color)
     window.geometry("700x500")
-    window.iconbitmap('code/icon.ico')
 
     font_style = ("Arial", 12)
     padding = {"padx": (5, 20), "pady": 5}
