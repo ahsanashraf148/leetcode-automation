@@ -4,13 +4,13 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 
 ## How to Download
 
-### Method 1: Download ZIP
+### Method 1: Download `LeetcodeAutomator_installer.exe`
 
-![alt text](Documentation/image-4.png)
-![alt text](Documentation/image-5.png)
+![alt text](Documentation/image4.png)
+![alt text](Documentation/image5.png)
 
-1. Click on `code` then `Download Zip`.
-2. Extract the zip file and open the folder.
+1. Click on `LeetcodeAutomator_installer.exe`.
+2. Click on `Download icon` and download it.
 
 ### Method 2: Clone The Repository
 
