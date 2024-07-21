@@ -3,3 +3,5 @@ config.txt
 venv
 build
 dist
+code
+leetcode automator.iss
