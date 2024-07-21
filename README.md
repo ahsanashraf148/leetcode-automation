@@ -36,8 +36,8 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 5. Create a new folder for your code files and enter its path.
 6. Click on `Create and Push Repo`.
 
-![Setup Instructions](image.png)
-![Setup Form](image-1.png)
+![Setup Instructions](Documentaion/image.png)
+![Setup Form](Documentation/image-1.png)
 
 ### Upload Problem to GitHub
 
