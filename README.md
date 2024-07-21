@@ -6,16 +6,16 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 
 ### Method 1: Download ZIP
 
-![alt text](image-4.png)
-![alt text](image-5.png)
+![alt text](Documentation/image-4.png)
+![alt text](Documentation/image-5.png)
 
 1. Click on `code` then `Download Zip`.
 2. Extract the zip file and open the folder.
 
 ### Method 2: Clone The Repository
 
-![alt text](image-4.png)
-![alt text](image-6.png)
+![alt text](Documentation/image-4.png)
+![alt text](Documentation/image-6.png)
 
 1. Click on `code`
 2. Copy the web URL
@@ -24,6 +24,10 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 ```shell
     git clone {url you copied} .
 ```
+
+## Click on `LeetcodeAutomator_installer` to install the app
+
+### Do quick steps, give github repo folder location to download the app and `Leetcode Automator` will be installed.
 
 ## How to Use
 
@@ -36,7 +40,7 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 5. Create a new folder for your code files and enter its path.
 6. Click on `Create and Push Repo`.
 
-![Setup Instructions](Documentaion/image.png)
+![Setup Instructions](Documentation/image.png)
 ![Setup Form](Documentation/image-1.png)
 
 ### Upload Problem to GitHub
@@ -48,8 +52,8 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 5. Enter the `problem code` and its `explanation`.
 6. Click `Submit`.
 
-![Upload Problem](image-2.png)
-![Problem Form](image-3.png)
+![Upload Problem](Documentation/image-2.png)
+![Problem Form](Documentation/image-3.png)
 
 **Congratulations!** The problem file has been created in the specified folder, uploaded to GitHub, and its details appended to `problems.xlsx`.
 
@@ -73,4 +77,4 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 
 ## Example Repository Created Through This Application
 
-https://github.com/ahsanashraf148/leetcoding.git
+[Example Repository](https://github.com/ahsanashraf148/leetcodeSampleRepo.git)
