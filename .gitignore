@@ -3,12 +3,5 @@ config.txt
 venv
 build
 dist
-code
+code/
 leetcode automator.iss
-excel_operations.py
-github_integration.py
-icon.ico
-leetcodeAutomator.py
-leetcodeAutomator.spec
-main_app.py
-setup.py
