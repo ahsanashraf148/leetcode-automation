@@ -14,7 +14,6 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 
 ### Method 2: Clone The Repository
 
-![alt text](Documentation/image-4.png)
 ![alt text](Documentation/image-6.png)
 
 1. Click on `code`
