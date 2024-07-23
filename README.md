@@ -77,3 +77,5 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 ## Example Repository Created Through This Application
 
 [Example Repository](https://github.com/ahsanashraf148/leetcodeSampleRepo.git)
+
+### You can suggest changes by adding an issue
