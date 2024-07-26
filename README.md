@@ -35,7 +35,7 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 1. Click on `Setup Git and Github Repositories`. Then wait for a few seconds (some dependencies need to be installed)
 2. Enter your `github username`.
 3. Enter the desired repository name.
-4. Enter your `GitHub Token`.
+4. Enter your <a href="#my-heading">Github Token</a>
 5. Create a new folder for your code files and enter its path.
 6. Click on `Create and Push Repo`.
 
@@ -60,7 +60,7 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 
 - Python must be installed.
 
-## Getting a GitHub Token
+<h2 id="my-heading">Getting a Github Token</h2>
 
 1. **Log in to GitHub:** Open your web browser and log in to your GitHub account.
 2. **Access Settings:** Click on your profile picture, then select `Settings`.
