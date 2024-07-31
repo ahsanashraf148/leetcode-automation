@@ -72,10 +72,10 @@ Automatically upload Leetcode problems and your solutions to your GitHub reposit
 8. **Generate Token:** Click "Generate token" at the bottom.
 9. **Copy Your New Token:** Copy your new token immediately. You won’t be able to see it again!
 
-**Important:** Treat your token as a password. Keep it secure and do not share it.
+**Important:** **Treat your token as a password. Keep it secure and do not share it**.
 
 ## Example Repository Created Through This Application
 
 [Example Repository](https://github.com/ahsanashraf148/leetcodeSampleRepo.git)
 
-### You can suggest changes by adding an issue
+### You can suggest changes by adding an issue on Github
